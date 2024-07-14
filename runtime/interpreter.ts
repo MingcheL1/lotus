@@ -1,8 +1,14 @@
-export type ValueType="null | number";
+export type ValueType="null"|"number";
 
 export interface RuntimeVal{
-    type: ValueType,
+    type: ValueType;
 }
 export interface NullVal extends RuntimeVal{
-    type: ValueType,
+    type: "null";
+    value: "null";
+}
+
+export interface NumberVal extends RuntimeVal{
+    type: "number";
+    value: "number";
 }
