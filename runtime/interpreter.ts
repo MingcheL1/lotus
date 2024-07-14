@@ -1,14 +1,4 @@
-export type ValueType="null"|"number";
+import {ValueType} from "./values.ts"
+import { NodeType,Stmt } from "../frontend/ast.ts"
 
-export interface RuntimeVal{
-    type: ValueType;
-}
-export interface NullVal extends RuntimeVal{
-    type: "null";
-    value: "null";
-}
-
-export interface NumberVal extends RuntimeVal{
-    type: "number";
-    value: "number";
-}
+export function evaluate (astNode)
