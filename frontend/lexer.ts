@@ -1,4 +1,5 @@
 export enum TokenType{
+    Null,
     Number,
     Identifier,
     Equals,
@@ -10,6 +11,7 @@ export enum TokenType{
 }
 const KEYWORDS: Record<string, TokenType>={
     "let": TokenType.Let,
+    "null": TokenType.Null
 
 }
 function isAlpha(src: string){
@@ -63,11 +65,11 @@ export function tokenize(sourceCode: string): Token[]{
                     ident+=src.shift();
                 }
                 const reserved = KEYWORDS[ident];
-                if(reserved==undefined){
-                    tokens.push(token(ident, TokenType.Identifier));
+                if(typeof reserved=="number"){
+                    tokens.push(token(ident, reserved));
                 }
                 else{
-                    tokens.push(token(ident,reserved));
+                    tokens.push(token(ident,TokenType.Identifier));
                 }
                 
 
