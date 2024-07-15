@@ -6,10 +6,12 @@ export enum TokenType{
     CloseParen,
     BinaryOperator,
     Let,
+    Const,
     EOF,
 }
 const KEYWORDS: Record<string, TokenType>={
-    "let": TokenType.Let,
+    "var": TokenType.Let,
+    "const": TokenType.Const,
 }
 function isAlpha(src: string){
     return src.toUpperCase() != src.toLowerCase()
