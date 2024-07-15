@@ -68,19 +68,19 @@ export default class Parser {
       TokenType.Identifier,
       "Expected identifier name."
     ).value;
+    //TODO: remove this later
+    // if (this.at().type == TokenType.Semicolon) {
+    //   this.eat();
+    //   if (isConstant) {
+    //     throw "No value provided.";
+    //   }
 
-    if (this.at().type == TokenType.Semicolon) {
-      this.eat();
-      if (isConstant) {
-        throw "No value provided.";
-      }
-
-      return {
-        kind: "VarDeclaration",
-        identifier,
-        constant: false,
-      } as VarDeclaration;
-    }
+    //   return {
+    //     kind: "VarDeclaration",
+    //     identifier,
+    //     constant: false,
+    //   } as VarDeclaration;
+    // }
 
     this.expect(
       TokenType.Equals,
@@ -93,11 +93,11 @@ export default class Parser {
       identifier,
       constant: isConstant,
     } as VarDeclaration;
-
-    this.expect(
-      TokenType.Semicolon,
-      "Variable declaration statment must end with semicolon."
-    );
+    //TODO: remove this later
+    // this.expect(
+    //   TokenType.Semicolon,
+    //   "Variable declaration statment must end with semicolon."
+    // );
 
     return declaration;
   }
