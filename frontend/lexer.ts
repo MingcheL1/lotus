@@ -7,12 +7,12 @@ export enum TokenType{
     CloseParen,
     BinaryOperator,
     Let,
+    Const,
     EOF,
 }
 const KEYWORDS: Record<string, TokenType>={
-    "let": TokenType.Let,
-    "null": TokenType.Null
-
+    "var": TokenType.Let,
+    "const": TokenType.Const,
 }
 function isAlpha(src: string){
     return src.toUpperCase() != src.toLowerCase()
@@ -86,7 +86,7 @@ export function tokenize(sourceCode: string): Token[]{
     tokens.push({type: TokenType.EOF, value:"EndOfFile"})
     return tokens;
 }
-const source= await Deno.readTextFile("./test.pig");
+const source= await Deno.readTextFile("./test.pscrpt");
 for(const token of tokenize(source)){
     console.log(token);
 }
