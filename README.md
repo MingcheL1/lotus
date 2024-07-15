@@ -4,11 +4,9 @@ Programming language for lazy people.
 
 ## declaring variables:
 
-name is value 
+name is value
 "is" is the assignment operator
 "=" is checking for if values are equal
- 
-
 
 ## print functions:
 

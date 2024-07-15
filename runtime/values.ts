@@ -22,7 +22,6 @@ export function MK_BOOL(b = true) {
   return { type: "boolean", value: b } as BooleanVal;
 }
 
-
 export interface NumberVal extends RuntimeVal {
   type: "number";
   value: number;
