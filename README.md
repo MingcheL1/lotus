@@ -1,4 +1,4 @@
-## PIG
+## LOTUS 莲花
 
 Programming language for lazy people.
 
