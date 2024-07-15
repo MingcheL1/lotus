@@ -1,12 +1,13 @@
 ## LOTUS 莲花
 
-Programming language for lazy people.
+Dynamic coding language made for CLI-Tool development and more.
 
 ## declaring variables:
 
-name is value
-"is" is the assignment operator
-"=" is checking for if values are equal
+let x be 3
+make y = 4
+var z is 5
+
 
 ## print functions:
 
