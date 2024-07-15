@@ -3,6 +3,7 @@ export type NodeType =
   | "VarDeclaration"
   | "NumericLiteral"
   | "Identifier"
+  | "AssignmentExpr"
   | "BinaryExpr";
 
 export interface Stmt {
@@ -38,4 +39,10 @@ export interface Identifier extends Expr {
 export interface NumericLiteral extends Expr {
   kind: "NumericLiteral";
   value: number;
+}
+
+export interface AssignmentExpr extends Expr{
+    kind: "AssignmentExpr";
+    assigne: Expr;
+    value: Expr;
 }

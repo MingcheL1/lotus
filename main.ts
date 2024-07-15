@@ -8,11 +8,6 @@ function pig() {
   const parser = new Parser();
   const env = new Environment();
 
-  env.declareVar("x", MK_NUMBER(100));
-  env.declareVar("true", MK_BOOL(true));
-  env.declareVar("false", MK_BOOL(false));
-  env.declareVar("null", MK_NULL());
-
   console.log("\nPigscript v0.1");
 
   while (true) {

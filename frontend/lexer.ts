@@ -14,8 +14,17 @@ export enum TokenType {
 }
 
 const KEYWORDS: Record<string, TokenType> = {
+  var: TokenType.Let,
   let: TokenType.Let,
   const: TokenType.Const,
+  always:TokenType.Const,
+  "=":TokenType.Equals,
+  make: TokenType.Let,
+  equal: TokenType.Equals,
+  is:TokenType.Equals,
+  be:TokenType.Equals,
+  rn:TokenType.Semicolon,
+
 };
 
 export interface Token {
