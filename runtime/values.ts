@@ -2,6 +2,7 @@ export type ValueType = "null" | "number" | "boolean";
 
 export interface RuntimeVal {
   type: ValueType;
+  
 }
 
 export interface NullVal extends RuntimeVal {

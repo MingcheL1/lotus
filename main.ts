@@ -5,9 +5,22 @@ import { MK_BOOL, MK_NULL, MK_NUMBER } from "./runtime/values.ts";
 lotus();
 
 function lotus() {
+  const logo = `
+\x1b[38;5;212m ██                                    
+\x1b[38;5;212m░██                                  
+\x1b[38;5;212m░██        \x1b[1;32m██████  ██████ ██   ██  ██████
+\x1b[38;5;212m░██       \x1b[1;32m██░░░░██░░░██░ ░██  ░██ ██░░░░ 
+\x1b[38;5;212m░██      \x1b[1;32m░██   ░██  ░██  ░██  ░██░░█████ 
+\x1b[38;5;212m░██      \x1b[1;32m░██   ░██  ░██  ░██  ░██ ░░░░░██
+\x1b[38;5;212m░████████\x1b[1;32m░░██████   ░░██ ░░██████ ██████ 
+\x1b[38;5;212m░░░░░░░░  \x1b[1;32m░░░░░░     ░░   ░░░░░░ ░░░░░░  
+\x1b[0m`;
+  
+  console.log(logo);
+    
   const parser = new Parser();
   const env = new Environment();
-
+  console.log(logo);
   console.log("\nLotus v0.1");
 
   while (true) {
@@ -19,6 +32,8 @@ function lotus() {
     const program = parser.produceAST(input);
 
     const result = evaluate(program, env);
-    console.log(result);
+    // deno-lint-ignore no-explicit-any
+    console.log((result as any).value);
   }
 }
+
