@@ -1,3 +1,10 @@
-var pscript=1000;
-let skibidi be 1;
-var sigma is 45;
+const foo=14
+const obj=[
+    x : 100,
+    y : 32,
+    foo,
+    skibidi: {
+        z: 100,
+        x:2000
+    }
+]
